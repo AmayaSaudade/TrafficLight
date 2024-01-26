@@ -24,6 +24,23 @@ final class ViewController: UIViewController {
         setUpLights()
     }
     
+    @IBAction func nextButtonDidTabbed() {
+        nextButton.setTitle("NEXT", for: .normal)
+        
+        resetLights()
+        switch activeColor % 3 {
+        case 0:
+            redLightView.alpha = 1
+        case 1:
+            yellowLightView.alpha = 1
+        case 2:
+            greenLightView.alpha = 1
+        default:
+            break
+        }
+        activeColor += 1
+    }
+    
     private func resetLights() {
         redLightView.alpha = 0.3
         yellowLightView.alpha = 0.3
@@ -41,23 +58,6 @@ final class ViewController: UIViewController {
         greenLightView.layer.cornerRadius = 75
         
         resetLights()
-    }
-    
-    @IBAction func nextButtonDidTabbed() {
-        nextButton.setTitle("NEXT", for: .normal)
-        
-        resetLights()
-        switch activeColor % 3 {
-        case 0:
-            redLightView.alpha = 1
-        case 1:
-            yellowLightView.alpha = 1
-        case 2:
-            greenLightView.alpha = 1
-        default:
-            break
-        }
-        activeColor += 1
     }
 }
     
