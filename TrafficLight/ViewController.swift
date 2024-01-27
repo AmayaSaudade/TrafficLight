@@ -53,9 +53,9 @@ final class ViewController: UIViewController {
     }
         
     private func setUpLights() {
-        redLightView.layer.cornerRadius = 75
-        yellowLightView.layer.cornerRadius = 75
-        greenLightView.layer.cornerRadius = 75
+        redLightView.layer.cornerRadius = redLightView.frame.width / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
         
         resetLights()
     }
