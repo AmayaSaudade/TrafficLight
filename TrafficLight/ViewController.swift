@@ -49,7 +49,6 @@ final class ViewController: UIViewController {
     
     private func setUpNextButton() {
         nextButton.layer.cornerRadius = 10
-        nextButton.setTitle("START", for: .normal)
     }
         
     private func setUpLights() {
