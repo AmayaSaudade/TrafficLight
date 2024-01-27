@@ -16,7 +16,7 @@ final class ViewController: UIViewController {
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
     
-    var activeColor = 0
+    private var activeColor = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
