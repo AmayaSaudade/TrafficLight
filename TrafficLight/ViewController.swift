@@ -17,6 +17,8 @@ final class ViewController: UIViewController {
     @IBOutlet var greenLightView: UIView!
     
     private var activeColor = 0
+    private let lightIsOn = 1.0
+    private let lightIsOff = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +32,11 @@ final class ViewController: UIViewController {
         resetLights()
         switch activeColor % 3 {
         case 0:
-            redLightView.alpha = 1
+            redLightView.alpha = lightIsOn
         case 1:
-            yellowLightView.alpha = 1
+            yellowLightView.alpha = lightIsOn
         case 2:
-            greenLightView.alpha = 1
+            greenLightView.alpha = lightIsOn
         default:
             break
         }
@@ -42,9 +44,9 @@ final class ViewController: UIViewController {
     }
     
     private func resetLights() {
-        redLightView.alpha = 0.3
-        yellowLightView.alpha = 0.3
-        greenLightView.alpha = 0.3
+        redLightView.alpha = lightIsOff
+        yellowLightView.alpha = lightIsOff
+        greenLightView.alpha = lightIsOff
     }
     
     private func setUpNextButton() {
