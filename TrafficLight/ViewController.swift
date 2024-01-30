@@ -27,7 +27,9 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func nextButtonDidTabbed() {
-        nextButton.setTitle("NEXT", for: .normal)
+        if nextButton.currentTitle == "START" {
+            nextButton.setTitle("NEXT", for: .normal)
+        }
         
         resetLights()
         switch activeColor % 3 {
