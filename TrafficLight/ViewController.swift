@@ -23,7 +23,13 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNextButton()
-        setUpLights()
+        resetLights()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redLightView.layer.cornerRadius = redLightView.frame.width / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
     }
     
     @IBAction func nextButtonDidTabbed() {
@@ -53,14 +59,6 @@ final class ViewController: UIViewController {
     
     private func setUpNextButton() {
         nextButton.layer.cornerRadius = 10
-    }
-        
-    private func setUpLights() {
-        redLightView.layer.cornerRadius = redLightView.frame.width / 2
-        yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
-        greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
-        
-        resetLights()
     }
 }
     
